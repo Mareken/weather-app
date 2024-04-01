@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Weather</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    {{>header}}
+
+	<form id="weather-form">
+		<p>Type in the latitude and longitude of the location to get the weather</p>
+		<div class="form-row">
+			<div class="form-group">
+				<label for="lat">Latitude</label>
+				<input type="text" id="lat" name="lat" autocomplete="off" required>
+			</div>
+			<div class="form-group">
+				<label for="lon">Longitude</label>
+				<input type="text" id="lon" name="lon" autocomplete="off" required>
+			</div>
+		</div>
+		<button type="submit" id="weather-button" disabled>Get Weather</button>
+	</form>
+
+	<div id="weather-info">
+		<p>Location: <span class="name"></span></p>
+		<p>Country: <span class="country"></span></p>
+		<p>Temperature: <span class="temperature">&nbsp;°C</span></p>
+		<p>Description: <span class="description"></span></p>
+		<p>Feels Like: <span class="feels-like">&nbsp;°C</span></p>
+		<p>Humidity: <span class="humidity"></span></p>
+		<p>Pressure: <span class="pressure"></span></p>
+		<p>Wind Speed: <span class="wind"></span></p>
+	</div>
+
+    {{>footer}}
+
+	<script src="/js/app.js" type="module"></script>
+</body>
+
+</html>

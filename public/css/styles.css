@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: #222;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 200px;
+}
+
+footer {
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding: 16px 0;
+    margin-top: auto;
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+
+    @media (max-width: 500px) {
+        font-size: 48px;
+    }
+}
+
+header a {
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.1s ease;
+
+    &:focus {
+        outline: none;
+        border-color: #222;
+    }
+}
+
+#weather-form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eeeeee;
+    padding: 20px 16px 16px 16px;
+    gap: 24px;
+    border-radius: 4px;
+
+    .form-row {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex: 1;
+
+        @media (max-width: 500px) {
+            flex-direction: column;
+        }
+    }
+
+    .form-group {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        gap: 8px;
+
+        label {
+            width: fit-content;
+        }
+
+        input {
+            width: 100%;
+        }
+    }
+
+    button[type="submit"] {
+        background-color: #222;
+        color: #fff;
+        border: none;
+        padding: 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: all 0.15s ease;
+
+        &:hover {
+            background-color: #333;
+        }
+
+        &:disabled {
+            cursor: default;
+            background-color: rgba(34, 34, 34, 0.5);
+        }
+    }
+}
+
+#weather-info {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eeeeee;
+    padding: 20px 16px;
+    gap: 24px;
+    border-radius: 4px;
+    margin-top: 24px;
+    display: none;
+
+    &.-show {
+        display: flex;
+    }
+
+    p {
+        font-weight: bold;
+    }
+
+    span {
+        font-weight: normal;
+    }
+
+    .description {
+        text-transform: capitalize;
+    }
+}
