@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const latitude = parseInt(lat);
         const longitude = parseInt(lon);
 
-        fetch(`http://localhost:8080/weather?lat=${latitude}&lon=${longitude}`)
+        fetch(`/weather?lat=${latitude}&lon=${longitude}`)
             .then((response) => {
                 response.json().then((data) => {
                     if (data.error) {
